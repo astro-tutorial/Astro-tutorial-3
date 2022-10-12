@@ -18,6 +18,8 @@ const fontWeight = "bold"
 const textCase = "uppercase"
 const bulletStyle = "'*'"
 
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css'
 ---
 <style define:vars={{skillColor, fontWeight, textCase, bulletStyle}}>
@@ -43,9 +45,7 @@ import '../styles/global.css'
 		<title>{pageTitle}</title>
 	</head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-
+    <Navigation />
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
@@ -71,5 +71,6 @@ import '../styles/global.css'
     <ul>
       {skills.map((skill) => <li>{skill}</li>)}
     </ul>
+    <Footer />
   </body>
 </html>
