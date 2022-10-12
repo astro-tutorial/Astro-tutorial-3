@@ -13,14 +13,15 @@ const identity = {
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
 
-const skillColor = "green"
-const fontWeight = "bold"
-const textCase = "uppercase"
-const bulletStyle = "'*'"
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css'
+
+const skillColor = "green"
+const fontWeight = "bold"
+const textCase = "uppercase"
+const bulletStyle = "'*'"
 ---
 <style define:vars={{skillColor, fontWeight, textCase, bulletStyle}}>
   h1 {
@@ -69,7 +70,7 @@ import '../styles/global.css'
     </ul>
     <p>My skills are:<p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
     <Footer />
     <script>
